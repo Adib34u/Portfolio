@@ -1,14 +1,17 @@
 
+
+    
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #0f0f0f;
+      background: #0e0e0e;
       color: #eaeaea;
       overflow-x: hidden;
     }
 
     /* Hero Section */
     header {
+       backdrop-filter: blur(10px);
       height: 100vh;
       background: url("your-image.jpg") center/cover no-repeat fixed;
       display: flex;
@@ -20,18 +23,20 @@
       position: relative;
     }
     header::after {
+      background: url("assets/611284661_1207938497973375_7730075186528248208_n.jpg") center/cover no-repeat fixed;
+      backdrop-filter: blur(10px);
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.5);
+      background: rgb(113, 230, 214);
     }
     header h1 {
       font-size: 4rem;
       font-weight: bold;
-      background: linear-gradient(135deg, #00f7ff, #ff00ff, #f1ff76);
+      background: linear-gradient(135deg, #1100ff, #ff00ff, #ff0000,#e5ff00);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+      text-shadow: 2px 2px 10px rgba(95, 91, 91, 0.8);
       animation: glossyShine 5s infinite linear;
       position: relative;
       z-index: 1;
@@ -44,13 +49,25 @@
     header p {
       font-size: 1.2rem;
       opacity: 0.9;
+    
+      z-index: 1;
+      font-weight: bold;
+      background: linear-gradient(135deg, #ff0000, #001aff, #ff0000,#ff00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 10px rgba(95, 91, 91, 0.8);
+      animation: glossyShine 5s infinite linear;
       position: relative;
       z-index: 1;
+      transition: all 0.6s ease;
     }
+     header p:hover {
+      transform: perspective(600px) rotateY(10deg) scale(1.05);
+      text-shadow: 0 0 30px rgba(247, 0, 255, 0.8);}
 
     /* Navigation */
     nav {
-      background: rgba(20,20,20,0.9);
+      background: rgba(77, 74, 74, 0.9);
       padding: 15px;
       text-align: center;
       position: sticky;
@@ -77,7 +94,7 @@
       transition: width 0.4s ease;
     }
     nav a:hover {
-      color: #16575c;
+      color: #6ee6e0;
     }
     nav a:hover::after {
       width: 100%;
@@ -148,7 +165,7 @@
       border-radius: 15px;
       padding: 25px;
       flex: 1 1 calc(33% - 30px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+      box-shadow: 0 10px 25px rgba(114, 113, 113, 0.6);
       transition: transform 0.6s ease, box-shadow 0.6s ease;
     }
     .project-card:hover {
@@ -158,8 +175,8 @@
 
     /* Footer */
     footer {
-      background: #111;
-      color: #aaa;
+      background: #86808088;
+      color: #000000;
       text-align: center;
       padding: 25px 0;
     }
